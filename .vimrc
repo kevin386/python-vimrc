@@ -15,17 +15,17 @@ call vundle#begin('~/.vim/plugins')
 Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
-Plugin 'tmhedberg/SimpylFold'
+"Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'nvie/vim-flake8'
+"Plugin 'jnurmine/Zenburn'
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'jistr/vim-nerdtree-tabs'
+"Plugin 'kien/ctrlp.vim'
+"Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " All of your Plugins must be added before the following line
@@ -53,14 +53,13 @@ nnoremap <space> za
 " SimpylFold
 let g:SimpylFold_docstring_preview=1
 
-au BufNewFile,BufRead *.py
-\ set tabstop=4 |
-\ set softtabstop=4 |
-\ set shiftwidth=4 |
-\ set textwidth=79 |
-\ set expandtab |
-\ set autoindent |
-\ set fileformat=unix |
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+"set textwidth=79
+set expandtab
+set autoindent
+set fileformat=unix
 
 " 标示不必要的空白字符
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
@@ -73,7 +72,7 @@ set encoding=utf-8
 let python_highlight_all=1
 syntax on
 
-call togglebg#map("<F5>")
+"call togglebg#map("<F5>")
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
@@ -82,9 +81,9 @@ set nu
 set clipboard=unnamed
 
 if has('gui_running')
-    set background=dark
-    colorscheme solarized 
+"    set background=dark
+"    colorscheme solarized
 else
-    colorscheme Zenburn
+"    colorscheme Zenburn
 endif
 
